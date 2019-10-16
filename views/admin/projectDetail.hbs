@@ -1,0 +1,62 @@
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Dashboard</h1>
+        <div class="btn-toolbar mb-2 mb-md-0">
+          <div class="btn-group mr-2">
+            <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+            <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+          </div>
+          <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
+            <span data-feather="calendar"></span>
+            This week
+          </button>
+        </div>
+      </div>
+      </div>
+      <form>
+          <div class="row">
+              <div class="col-md-6">
+                  <div class="form-group">
+                      <label for="name">Name</label>
+                      <input type="text" class="form-control" id="name" value="{{project.name}}" name="name">
+                  </div>
+              </div>
+               <div class="col-md-6">
+                <div class="form-group">
+                    <label for="alias">Alias</label>
+                    <input type="text" class="form-control" id="alias" value="{{project.alias}}" name="alias" readonly>
+                </div>
+            </div>
+
+             <div class="col-md-6">
+                <div class="form-group">
+                    <label for="github">Github URL</label>
+                    <input type="text" class="form-control" id="github" value="{{project.githubUrl}}" name="githubUrl">
+                </div>
+            </div>
+
+             <div class="col-md-6">
+                <div class="form-group">
+                    <label for="tags">Tags</label>
+                    <input type="text" class="form-control" id="tags" value="{{#each project.tags}}{{this.name}},{{/each}}" name="tags">
+                </div>
+            </div>
+
+             <div class="col-md-6">
+                <div class="form-group">
+                    <textarea class="form-control" name="description" id="desc" rows="3" >{{project.description}}</textarea>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <img src="/images/mean.jpg" width="250px" height="250px" srcset="">
+                </div>
+            </div>
+
+        </div>
+
+        <button class="btn btn-primary" type="submit">Update</button>
+          </div>
+      </form>
+    </main>

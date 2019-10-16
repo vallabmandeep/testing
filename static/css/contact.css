@@ -1,0 +1,33 @@
+*{
+    font-family: "Quicksand", sans-serif;
+}
+.social{
+    list-style-type: none;
+    }
+
+.social > li {
+    display:inline;
+}
+
+/* .social > li a i {
+    padding:3px;
+    color:grey;
+} */
+.social a{
+    align-items: center;
+    display: inline;
+    font-size: 1.5rem;
+    color:grey;
+    height: 2rem;
+    justify-content: center;
+    opacity: 0.5;
+    transition-property: opacity, transform;
+    width: 2rem;
+    will-change: opacity, transform;
+}
+/* 
+.social > li a:hover{
+    background-color: #007bff65;
+    opacity: 1;
+    transform: scale(1.25);
+} */
